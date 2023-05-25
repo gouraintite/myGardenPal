@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background: url("img/bg.png");
+  font-family: Poppins;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  border: 1px dotted transparent;
+  max-height: 47px;
+  width: 100%;
+  animation: 1300ms ease-in-out 1300ms 1 alternate both navanime;
+  /*			@keyframes navanime{
+
+  			  0% {
+
+  				margin-left: 110%;
+  			    width: 60%;
+  			  }
+  			  30%{
+  			  	width: 80%;
+  			  }
+  			  50% {
+  			    width: 100%;
+  			  	margin-left: -24rem;
+  			  }
+  			  90%{
+  			  	width: 80%;
+  			  	margin-left: 20%;
+  			  }
+  			  100%{
+  			  }
+  			}*/
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  nav {
+    min-width: 320px;
+    max-width: 479px;
+    display: none;
+    justify-content: space-between;
+  }
+  nav .menu, nav .sign_log {
+    display: none;
+  }
+  nav .all_burger {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(50, 116, 102, 0.2);
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  nav .all_burger:active {
+    transform: scale(0.9) 0.4s ease-in-out;
+    transition-delay: 0.4s;
+  }
+  nav .burger {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2rem;
+  }
+  nav .burger::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2rem;
+    margin-top: 6px;
+  }
+  nav .burger::after {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2rem;
+    margin-top: 3px;
+  }
+}
+@keyframes navanime {
+  0% {
+    margin-top: -4rem;
+    width: 60%;
+  }
+}
+nav .menu {
+  display: flex;
+  justify-content: space-around;
+}
+nav .menu div {
+  padding: 10px 25px;
+}
+nav .menu div a {
+  color: #327466;
+  font-weight: 600;
+}
+nav .menu div a:hover {
+  color: #17B997;
+  top: -10px;
+  transition: 400ms ease-in-out;
+}
+nav .menu div .under {
+  background-color: #17B997;
+  width: 20px;
+  height: 5px;
+  border-radius: 1rem;
+  display: none;
+}
+nav .menu div .underShow {
+  display: inherit;
+  animation: 2s ease-in-out 0s 1 alternate both propre;
+}
+@keyframes propre {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+nav .others {
+  display: flex;
+  justify-content: space-around;
+}
+nav .searchBar {
+  background-color: #DDF7F1;
+  margin-right: 20px;
+  padding: 5px 10px;
+  align-content: center;
+  border-radius: 12px;
+}
+nav .searchBar img {
+  cursor: pointer;
+}
+nav .searchBar input {
+  border: none;
+  position: relative;
+  background-color: #DDF7F1;
+  height: 35px;
+  top: -2px;
+  margin-left: 5px;
+  font-size: 1rem;
+  color: #17B997;
+  font-weight: 700px;
+  width: 170px;
+}
+nav .searchBar input:focus {
+  outline: black;
+}
+nav .login {
+  background-color: #327466;
+  border-radius: 12px;
+  padding-top: 3px;
+  padding: 9px 25px;
+}
+nav .login a {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.mainSection {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 15px;
+}
+
+.section1 {
+  width: 60%;
+}
+.section1 .greenCircle {
+  background-color: #DDF7F1;
+  border-radius: 50%;
+  height: 530.51px;
+  width: 530.51px;
+  position: absolute;
+  z-index: 1;
+  top: 10rem;
+  left: 0.3rem;
+  margin-left: 9rem;
+  animation: 1s ease-in-out 100ms 1 alternate both circle;
+}
+@keyframes circle {
+  0% {
+    height: 130.51px;
+    width: 130.51px;
+  }
+  90% {
+    height: 570.51px;
+    width: 570.51px;
+  }
+  95% {
+    height: 550.51px;
+    width: 550.51px;
+  }
+  100% {
+    height: 530.51px;
+    width: 530.51px;
+  }
+}
+.section1 .bigImg {
+  position: absolute;
+  width: 535px;
+  height: 635px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  top: 3.8rem;
+  margin-left: 8.7rem;
+  padding-right: 1rem;
+}
+.section1 .left {
+  position: absolute;
+  z-index: 3;
+  top: 27.3rem;
+  left: 6rem;
+}
+.section1 .left .mainImg {
+  width: 80%;
+}
+.section1 .left .other {
+  position: absolute;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 18px;
+  margin-top: -2rem;
+  margin-left: -2rem;
+}
+.section1 .left .other .playImg {
+  width: 10%;
+  padding-top: 0.6rem;
+}
+.section1 .left .other p {
+  font-size: 0.7rem;
+  color: #327466;
+  margin-left: 6px;
+}
+.section1 .left .other .how {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: black;
+}
+.section1 .right {
+  position: absolute;
+  z-index: 3;
+  top: 27.3rem;
+  left: 33.5rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 10rem;
+  /*		animation: 1300ms ease-in-out 100ms 1 alternate both right;
+
+  		@keyframes right {
+
+  			0%{
+  				width: 1px;
+  				height: 1px;
+  			}
+
+  			100%{
+
+  			}
+
+  		}
+  */
+}
+.section1 .right .box {
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 34%;
+  padding: 3px 0px;
+  padding-left: 3px;
+  margin-left: 34%;
+  margin-top: -1.6rem;
+  transform: rotate(-6deg);
+  margin-bottom: -0.9rem;
+}
+.section1 .right .garden {
+  border-radius: 12px;
+  width: 75%;
+  margin-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.section1 .right .garden img {
+  border-radius: 12px;
+}
+.section1 .right .give {
+  border: 1px solid #327466;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  padding: 7px 12px;
+  margin-left: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section2 {
+  width: 40%;
+  margin-top: 5rem;
+  margin-left: 4rem;
+}
+.section2 .head h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+.section2 .head h1 span {
+  color: #17B997;
+}
+.section2 .head h1 img {
+  position: absolute;
+}
+.section2 .content {
+  font-size: 0.9rem;
+  color: #327466;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.section2 .volunteer {
+  background-color: #DDF7F1;
+  width: 45%;
+  border-radius: 10px;
+  padding: 15px 15px;
+  margin-bottom: 3rem;
+}
+.section2 .volunteer img {
+  position: absolute;
+  background-color: white;
+  padding: 3px;
+  margin-top: 2px;
+  border-radius: 20px;
+  width: 1.8rem;
+}
+.section2 .volunteer a {
+  font-size: 0.9rem;
+  color: #327466;
+  font-weight: 500;
+  padding-left: 2rem;
+}
+.section2 .provideTitle {
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+.section2 .one {
+  margin-bottom: 0.5rem;
+}
+.section2 .one, .section2 .two {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 2.3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #327466;
+  font-weight: 500;
+  margin-left: -5rem;
+}
+.section2 .one div, .section2 .two div {
+  padding: 5px 15px;
+  transition: 400ms ease-in-out;
+}
+.section2 .one div:hover, .section2 .two div:hover {
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transform: rotate(-6deg);
+}
+.section2 .one div img, .section2 .two div img {
+  width: 90%;
+}
+
+footer p {
+  margin-top: -1rem;
+  margin-left: 5rem;
+}
+footer p img {
+  position: absolute;
+  margin-top: 5px;
+}
+footer p span {
+  color: #327466;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
